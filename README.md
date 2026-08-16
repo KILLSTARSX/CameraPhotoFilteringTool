@@ -59,14 +59,19 @@
 - 删除过程中单个文件失败不会中断整体流程，失败原因会明确列出
 
 ---
+
 📝 更新日志
 v3.3：关于窗口加大、移除手动选择按钮与锁定
+
 v3.2：自动识别显示修正、强制删除、滑块吸附
+
 v3.1：网格预览、缩略图三档、自动识别锁定
+
 v3.0：自动识别、格式不符保护、配置记忆
+
 v2.0：多 RAW 格式支持、递归扫描
+
 v1.0：基础 RAW / JPG 筛选删除
 
+
 ⭐ 如果觉得有用，欢迎点个 Star！
-https://img.shields.io/github/stars/KILLSTARSX/CameraPhotoFilteringTool?style=social
-https://img.shields.io/github/forks/KILLSTARSX/CameraPhotoFilteringTool?style=social
