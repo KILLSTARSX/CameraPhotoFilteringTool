@@ -1,171 +1,104 @@
-════════════════════════════════════════════════════════════
 Camera Photo Filter Tool – User Manual
 (Version v3.3 · Author: KILL-STAR SX)
-════════════════════════════════════════════════════════════
 
 【Software Overview】
-This tool helps organize photos taken with digital cameras. Cameras are often set to shoot in "JPG + RAW dual format", meaning each shot produces both a JPG file and a RAW file. After selecting and deleting photos, folders often contain orphaned files – JPGs without a matching RAW, or RAW files without a matching JPG. This tool automatically finds these orphaned files and, after your confirmation, moves them to the Windows Recycle Bin (recoverable – never permanently deleted).
+This tool helps organize photos taken with digital cameras that shoot in "JPG + RAW dual format" – where each shot produces both a JPG file and a RAW file. After selecting and deleting photos, folders often end up with orphaned files – JPGs without a matching RAW, or RAW files without a matching JPG. This tool automatically finds these orphaned files and, after your confirmation, moves them to the Windows Recycle Bin (recoverable – never permanently deleted).
 
 【System Requirements】
-
-Windows 10 / 11.
-
-The packaged .exe version requires no additional software – just double‑click to run.
-
-For the source code version, Python 3.10 or higher is required, along with Pillow and send2trash.
+- Windows 10 / 11
+- The packaged .exe version requires no additional software – just double-click to run
+- For the source code version: Python 3.10+ with Pillow and send2trash installed
 
 【User Interface】
-
-Target Folder: Input box + "Browse…" button. Clicking "Browse…" to select a folder automatically starts scanning – no need to click a separate scan button.
-
-RAW Format: Dropdown selection (labeled "Camera Brand")
-
-Auto‑detect (default): The program automatically detects the actual RAW format(s) present in the folder and uses them for pairing – you don't need to know the camera brand. After scanning, the dropdown remains on "Auto‑detect" and is directly operable – selecting a brand from the dropdown switches to manual mode (no locking, no extra button needed). The detected suffix appears in the "Suffix" input box (e.g., .rw2).
-
-Specific camera brands (Panasonic / Canon / Nikon / Sony / Fujifilm / Olympus / Pentax / Sigma / Samsung / Ricoh / Leica / Hasselblad / Phase One / Mamiya / Leaf): Automatically fills in the corresponding RAW suffix(es).
-
-Custom: Manually enter one or more suffixes in the "Suffix" box, separated by commas (e.g., .rw2,.dng). Extensions are case‑insensitive.
-
-Important protection: If you manually select a brand whose format does not match the actual RAW files in the folder (e.g., you select Sony .ARW but the folder contains .RW2), the status bar will show a warning: "Detected RAW format in folder is .RW2, which does not match the selected format. We recommend switching to Auto‑detect or choosing the correct brand." In this case, those mismatched RAW files will not be treated as orphans, preventing accidental deletion.
-
-Scan Scope: Dropdown selection
-
-Current folder only (default): Scans only the top level of the selected folder.
-
-Include one‑level subfolders / Include two‑level subfolders / Include all subfolders.
-When recursive scanning is enabled, files in all levels are paired by basename (path is not considered). Deletion preserves each file's original location.
-
-Deletion Mode (choose one): Delete orphaned JPGs only / Delete orphaned RAW files only / Delete all orphaned files.
-
-File List: Displays all orphaned files with: File name / Type (JPG, RAW) / File size / Containing folder.
-
-【Click to sort】 Click the "File name", "Type", or "File size" column header to sort by that column; click again to toggle ascending/descending (▲/▼ markers appear). Sorting resets to default after a new scan.
-
-【Double‑click to locate】 Double‑click any file row to open Windows File Explorer and highlight (locate) that photo, making it easy to check the original location.
-
-Photo Preview Area (title "Photo Preview"): Shows the files that will be deleted in a multi‑column grid layout:
-
-Multiple thumbnails per row – the number of columns automatically adapts to the window width; layout and thumbnail size adjust as the window is resized.
-
-JPG files display thumbnails, maintaining original aspect ratio (no distortion).
-
-RAW files show a square placeholder box with the uppercase suffix (e.g., RW2, ARW) centred inside.
-
-At the top of the preview area there is a "Thumbnail Size" slider with three presets: Small (120px) / Medium (200px, default) / Large (320px). Switching presets regenerates all thumbnails in the background without blocking the UI.
-
-Vertical scrolling only (up/down), no horizontal scrollbar.
-
-The divider between the file list and preview area can be dragged vertically to adjust the preview height.
-
-Clicking a thumbnail or placeholder highlights the corresponding file in the list above.
-
-"Confirm before deletion" checkbox: Checked by default (shows a confirmation dialog with count, total size, and Recycle Bin notice). Unchecking it means clicking "Confirm Deletion" will proceed directly without a pop‑up.
-
-"Confirm Deletion" button: Displays the number of files to be deleted and their total size. When the RAW format is not matched (either no known RAW files are found in the folder, or the detected format does not match the selected one), this button automatically changes to "Force Delete". Clicking it forces a secondary confirmation pop‑up (warning about the mismatch and asking you to confirm that those files no longer need a RAW counterpart) – this pop‑up appears even if the "Confirm before deletion" checkbox is unchecked.
-
-"Operation Result" area: Shows scan results, skip notices, deletion success/failure statistics, and reasons for failures.
-
-"About" button: Opens a custom pop‑up (large size, no system beep). The content is selectable and copyable. Developer links (GitHub: https://github.com/KILLSTARSX, Bilibili: https://space.bilibili.com/381623593) are clickable and open directly. The first time you successfully delete files, a thank‑you message will automatically appear for 2 seconds after the deletion – this happens only once per device.
+1. Target Folder: Input box + "Browse…" button. Scanning starts automatically after selecting a folder.
+2. RAW Format: Dropdown selection for camera brand
+   - Auto-detect (default): Automatically detects RAW format in the folder
+   - Brand selection: Select from 15+ camera brands, auto-fills the corresponding suffix
+   - Custom: Manually enter suffixes, comma-separated (e.g. .rw2,.dng)
+   - Mismatched formats trigger a warning to prevent accidental deletion
+3. Scan Scope: Current folder only / Include one-level subfolders / Include two-level subfolders / Include all subfolders
+4. Deletion Mode: Delete orphaned JPGs only / Delete orphaned RAW files only / Delete all orphaned files
+5. File List: Displays file name, type, size, and containing folder
+   - Click header to sort
+   - Double-click row to locate in File Explorer
+6. Photo Preview Area: Grid display of files to be deleted
+   - JPG shows thumbnails, RAW shows suffix placeholder
+   - Slider adjusts thumbnail size (Small/Medium/Large)
+   - Click thumbnail to highlight corresponding row in list
+7. Confirm Before Deletion: Checked by default. Uncheck to delete immediately.
+8. Confirm Deletion: Displays file count and total size. Changes to "Force Delete" when format mismatch occurs.
+9. Operation Result: Shows scan results, deletion statistics, and failure reasons.
 
 【Configuration Memory】
-The software automatically remembers the following settings from your last use and restores them on next launch:
-
-Last selected folder path.
-
-RAW format selection (Auto‑detect / Brand / Manually entered suffix).
-
-Scan scope selection.
-
-State of the "Confirm before deletion" checkbox.
-
-Thumbnail size preset (Small / Medium / Large).
-
-Window size, position, and preview area height.
-Configurations are saved in %APPDATA%\相机照片筛选工具\config.json (no manual editing needed). If the file is missing or corrupted, defaults are used automatically.
+The software automatically remembers these settings from your last session:
+- Last selected folder path
+- RAW format selection (Auto-detect / Brand / Custom suffix)
+- Scan scope selection
+- "Confirm before deletion" checkbox state
+- Thumbnail size preset (Small/Medium/Large)
+- Window size, position, and preview area height
+Settings are saved to: %APPDATA%\相机照片筛选工具\config.json
+If the file is missing or corrupted, defaults are used automatically.
 
 【Usage Steps】
-
-Click "Browse…" to select your photo folder – scanning starts automatically (status bar shows "Scanning...").
-
-If needed, adjust the "RAW Format" and "Scan Scope", then click "Start Scan" to rescan.
-
-Review the file list and photo preview area:
-
-If orphaned files are found: status bar shows "Scan complete: found N orphaned files (JPG: x, RAW: y)."
-
-If no orphaned files are found: status bar shows "No unpaired files found."
-
-If format mismatch: status bar shows the mismatch warning – switch to "Auto‑detect" or choose the correct brand.
-
-Choose your deletion mode.
-
-Click "Confirm Deletion (N files, total X)":
-
-If confirmation is enabled: a confirmation pop‑up appears (file count, total size, "Files will be moved to Recycle Bin, recoverable"). Click "Yes" to proceed.
-
-If confirmation is disabled: deletion starts immediately.
-
-After deletion, a result pop‑up shows success/failure counts. If any failures occur, the "Operation Result" area lists failed file names and reasons. The program then automatically rescans the current folder and refreshes the list and preview; the status bar shows "Scan complete" or "No unpaired files found" – no extra pop‑ups.
-
-If you accidentally delete something, open the Windows Recycle Bin to restore the files.
+1. Click "Browse…" to select your photo folder – scanning starts automatically (status bar shows "Scanning...")
+2. If needed, adjust RAW Format and Scan Scope, then click "Start Scan" to rescan
+3. Review the file list and preview area:
+   - If orphaned files are found: status bar shows "Scan complete: found N orphaned files (JPG: x, RAW: y)"
+   - If no orphaned files: status bar shows "No unpaired files found"
+   - If format mismatch: status bar shows the warning – switch to "Auto-detect" or choose the correct brand
+4. Choose your deletion mode
+5. Click "Confirm Deletion (N files, total X)":
+   - With confirmation enabled: pop-up appears – click "Yes" to proceed
+   - With confirmation disabled: deletion starts immediately
+6. After deletion, a result pop-up shows success/failure counts. Failures are listed in the "Operation Result" area. The program then automatically rescans and refreshes – status bar shows "Scan complete" or "No unpaired files found" (no extra pop-ups)
+7. If you accidentally delete something: open the Windows Recycle Bin to restore
 
 【Pairing Rules】
+- The portion of the filename without the extension is called the basename
+- Same basename + at least one JPG + at least one RAW → paired – not deleted
+- JPG without matching RAW → orphaned JPG
+- RAW without matching JPG → orphaned RAW
+- Comparison is case-insensitive: P10001.JPG and P10001.rw2 are treated as a pair
+- When recursive scanning is enabled, files with the same basename in different subfolders are also paired together
+- RAW files that do not match the selected format are excluded from orphan detection
 
-The portion of the file name without the extension is called the basename.
-
-If the same basename has at least one JPG and at least one RAW file → they are considered paired and will not be deleted.
-
-Only JPG without RAW → orphaned JPG; only RAW without JPG → orphaned RAW.
-
-Comparison is case‑insensitive: P10001.JPG and P10001.rw2 are treated as a pair.
-
-When recursive scanning is enabled, files with the same basename in different subfolders are also paired together. Deletion moves each file from its original location to the Recycle Bin.
-
-RAW files that do not match the selected format (as described in Interface item 2) are excluded from orphan detection.
-
-【Built‑in Camera Brands and RAW Suffix Reference】
-Panasonic .RW2
-Canon .CR3 / .CR2 / .CRW
-Nikon .NEF / .NRW
-Sony .ARW / .SR2 / .SRF
-Fujifilm .RAF
-OLYMPUS .ORF
-Pentax .PEF
-Sigma .X3F
-Samsung .SRW
-Ricoh .DNG
-Leica .DNG
-Hasselblad .3FR
-Phase One .IIQ
-Mamiya .MEF
-Leaf .MOS
+【Built-in Camera Brands and RAW Suffix Reference】
+  Panasonic      .RW2
+  Canon          .CR3 / .CR2 / .CRW
+  Nikon          .NEF / .NRW
+  Sony           .ARW / .SR2 / .SRF
+  Fujifilm       .RAF
+  OLYMPUS        .ORF
+  Pentax         .PEF
+  Sigma          .X3F
+  Samsung        .SRW
+  Ricoh          .DNG
+  Leica          .DNG
+  Hasselblad     .3FR
+  Phase One      .IIQ
+  Mamiya         .MEF
+  Leaf           .MOS
 
 【Safety Notes】
-
-All deletion operations are performed via the send2trash library or the Windows Shell API (SHFileOperation with FOF_ALLOWUNDO). Files are always moved to the Recycle Bin – there is no permanent deletion call in the program.
-
-If a single file fails during deletion, the process continues for the remaining files; failure reasons are clearly listed.
+- All deletion operations use send2trash or the Windows Shell API (SHFileOperation with FOF_ALLOWUNDO)
+- Files are always moved to the Recycle Bin – there is no permanent deletion in this program
+- If a single file fails during deletion, the process continues for the remaining files – failure reasons are clearly listed
 
 【Frequently Asked Questions】
-
-Some files fail to delete?
-Possible reasons: the file is in use by another program, the Recycle Bin is full, or the folder is on a network drive (Windows has limited Recycle Bin support for network shares). You can try again later.
-
-The preview area is empty?
-It shows a message when there are no files to be deleted under the current deletion mode. Some corrupted JPGs that cannot be decoded are skipped and the count is displayed.
-
-Status bar says "RAW format does not match"?
-The selected brand/suffix does not match the actual RAW files in the folder – switch to "Auto‑detect".
-
-Why is there no "Scan complete" pop‑up after deletion?
-This is an optimisation in v3.0: after deletion, the program automatically rescans and refreshes the list and preview, and the result is shown directly in the status bar ("Scan complete" / "No unpaired files found") – no extra pop‑up is displayed.
+1. Some files fail to delete?
+   Possible reasons: the file is in use by another program, the Recycle Bin is full, or the folder is on a network drive (Windows has limited Recycle Bin support for network shares). Try again later.
+2. The preview area is empty?
+   It shows a message when there are no files to be deleted under the current deletion mode. Some corrupted JPGs that cannot be decoded are skipped and the count is displayed.
+3. Status bar says "RAW format does not match"?
+   The selected brand/suffix does not match the actual RAW files in the folder – switch to "Auto-detect" or choose the correct brand.
+4. Why is there no "Scan complete" pop-up after deletion?
+   This is an optimisation in v3.0: after deletion, the program automatically rescans and refreshes the list and preview – the result is shown directly in the status bar ("Scan complete" / "No unpaired files found"), with no extra pop-up.
 
 【Changelog】
 v3.3 – Enlarged About window, removed manual selection button and lock logic
-v3.2 – Auto‑detect display fixes, force deletion, slider snapping
-v3.1 – Grid preview, three thumbnail sizes, auto‑detect locking
-v3.0 – Auto‑detect, format mismatch protection, configuration memory
+v3.2 – Auto-detect display fixes, force deletion, slider snapping
+v3.1 – Grid preview, three thumbnail sizes, auto-detect locking
+v3.0 – Auto-detect, format mismatch protection, configuration memory
 v2.0 – Support for multiple RAW formats, recursive scanning
 v1.0 – Basic RAW and JPG filter deletion
-
-════════════════════════════════════════════════════════════
