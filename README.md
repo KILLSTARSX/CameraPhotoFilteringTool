@@ -15,16 +15,16 @@
 
 ## 📖 目录 / Table of Contents
 
-- [功能亮点 / Features](#-功能亮点--features)
-- [快速开始 / Quick Start](#-快速开始--quick-start)
-- [支持的相机品牌 / Supported Cameras](#-支持的相机品牌与-raw-格式--supported-camera-brands--raw-formats)
-- [安全说明 / Safety Notes](#-安全说明--safety-notes)
-- [更新日志 / Changelog](#-更新日志--changelog)
-- [作者 / Author](#-作者--author)
+- [功能亮点](#功能亮点)
+- [快速开始](#快速开始)
+- [支持的相机品牌与 RAW 格式](#支持的相机品牌与-raw-格式)
+- [安全说明](#安全说明)
+- [更新日志](#更新日志)
+- [作者](#作者)
 
 ---
 
-## ✨ 功能亮点 / Features
+## <a id="功能亮点"></a> ✨ 功能亮点 / Features
 
 | 中文 | English |
 | :--- | :--- |
@@ -40,14 +40,14 @@
 
 ---
 
-## 🚀 快速开始 / Quick Start
+## <a id="快速开始"></a> 🚀 快速开始 / Quick Start
 
 ### 下载安装 / Download & Install
 
-1. 前往 **[Releases 页面](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** 下载最新版本
-2. 双击运行，无需安装任何额外软件（适用于 Windows 10 / 11）
-1. Go to **[Releases page](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** to download the latest version
-2. Double-click to run – no additional software required (Windows 10 / 11)
+| 步骤 | 中文 | English |
+| :--- | :--- | :--- |
+| ① | 前往 **[Releases 页面](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** 下载最新版本 | Go to **[Releases page](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** to download the latest version |
+| ② | 双击运行，无需安装任何额外软件（适用于 Windows 10 / 11） | Double-click to run – no additional software required (Windows 10 / 11) |
 
 ### 三步上手 / Three Steps
 
@@ -61,7 +61,7 @@
 
 ---
 
-## 📸 支持的相机品牌与 RAW 格式 / Supported Camera Brands & RAW Formats
+## <a id="支持的相机品牌与-raw-格式"></a> 📸 支持的相机品牌与 RAW 格式 / Supported Camera Brands & RAW Formats
 
 | 品牌 / Brand | RAW 后缀 / RAW Suffix(es) |
 | :--- | :--- |
@@ -83,7 +83,7 @@
 
 ---
 
-## ⚠️ 安全说明 / Safety Notes
+## <a id="安全说明"></a> ⚠️ 安全说明 / Safety Notes
 
 | 中文 | English |
 | :--- | :--- |
@@ -94,7 +94,7 @@
 
 ---
 
-## 📝 更新日志 / Changelog
+## <a id="更新日志"></a> 📝 更新日志 / Changelog
 
 **v4.0**
 - **新增**：回收站删除可恢复（确认弹窗明确提示）
@@ -148,9 +148,10 @@
 
 **v1.0**
 - **新增**：基础 RAW / JPG 筛选删除
+
 ---
 
-## 👨‍💻 作者 / Author
+## <a id="作者"></a> 👨‍💻 作者 / Author
 
 - **KILL-STAR SX**
 - GitHub: [KILLSTARSX](https://github.com/KILLSTARSX)
