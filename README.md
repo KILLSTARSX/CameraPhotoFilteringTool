@@ -41,8 +41,8 @@
 
 1. 前往 **[Releases 页面](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** 下载最新版本
 2. 双击运行，无需安装任何额外软件（适用于 Windows 10 / 11）
-3. Go to **[Releases page](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** to download the latest version
-4. Double-click to run – no additional software required (Windows 10 / 11)
+1. Go to **[Releases page](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** to download the latest version
+2. Double-click to run – no additional software required (Windows 10 / 11)
 
 ### 三步上手 / Three Steps
 
@@ -130,7 +130,7 @@
 
 - **KILL-STAR SX**
 - GitHub: [KILLSTARSX](https://github.com/KILLSTARSX)
-- 哔哩哔哩 / Bilibili: [KILL-STAR](https://space.bilibili.com/381623593)
+- 哔哩哔哩 / Bilibili: [KILL-STAR_SX](https://space.bilibili.com/381623593)
 
 ---
 
