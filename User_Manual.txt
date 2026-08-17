@@ -1,4 +1,4 @@
-Camera Photo Filter Tool – User Manual
+JPG-RAW_OrphanCleaner – User Manual
 (Version v3.3 · Author: KILL-STAR SX)
 
 【Software Overview】
