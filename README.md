@@ -5,11 +5,11 @@
 [![Latest Release](https://img.shields.io/github/v/release/KILLSTARSX/JPG-RAW_OrphanCleaner)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)
 [![Size](https://img.shields.io/badge/size-16.2%20MB-brightgreen)](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)
 
-> **一张照片的大小，装下了一整套智能照片整理工具**  
-> 轻，却前所未有的强。
+>一张照片的内存大小，装下了一整套智能照片管理工具。轻，却前所未有的强。  
+>Same size as a RAW photo – packed with a full suite of smart tools. Small, but ridiculously powerful.
 
-> **中文**：自动清理 JPG + RAW 双格式中的孤立文件，支持 15+ 相机品牌，移入回收站可恢复。  
-> **English**：Automatically find and delete orphaned JPG/RAW files, supports 15+ camera brands, moves to Recycle Bin.
+>自动清理 JPG + RAW 双格式中的孤立文件，支持 15+ 相机品牌，移入回收站可恢复。  
+>Automatically find and delete orphaned JPG/RAW files, supports 15+ camera brands, moves to Recycle Bin.
 
 ---
 
