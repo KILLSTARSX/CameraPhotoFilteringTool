@@ -1,4 +1,4 @@
-# 📷 相机照片筛选工具 (JPG-RAW_OrphanCleaner)
+# 📷 JPG-RAW_孤立文件清理器 (JPG-RAW_OrphanCleaner)
 相机照片筛选工具：自动清理 JPG+RAW 双格式中的孤立文件，支持 15+ 相机厂商品牌，移入回收站可恢复 / Automatically find and delete orphaned JPG/RAW files, supports 15+ camera brands, moves to Recycle Bin.
 
 ## ✨ 功能亮点
@@ -17,7 +17,7 @@
 
 ### 下载安装
 
-1. 前往 **[Releases 页面](https://github.com/KILLSTARSX/CameraPhotoFilteringTool/releases/latest)** 下载最新版本的 `CameraPhotoFilteringTool.exe`
+1. 前往 **[Releases 页面](https://github.com/KILLSTARSX/JPG-RAW_OrphanCleaner/releases/latest)** 下载最新版本软件
 2. 双击运行，无需安装任何额外软件（适用于 Windows 10 / 11）
 
 ### 基本使用
